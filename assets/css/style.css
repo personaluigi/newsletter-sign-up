@@ -1,0 +1,129 @@
+.img-div {
+    background-image: url(../images/illustration-sign-up-mobile.svg);
+    background-size: cover;
+    width: 100%;
+    height: 270px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.div-content {
+    padding: 19px;
+}
+
+.div-content h1 {
+    font-size: 2.5rem;
+    padding: 13px 0;
+    color: hsl(234, 29%, 20%);
+}
+
+.div-content p {
+    font-weight: 400;
+    color: hsl(234, 29%, 20%);
+}
+
+.list-ul {
+    margin: 1.5rem 0;
+}
+
+.list-li {
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+    line-height: 23px;
+    gap: .7rem;
+    color: hsl(234, 29%, 20%);
+}
+
+.validate-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: .6rem;
+    font-size: .9rem;
+}
+
+#email-span {
+    color: hsl(234, 29%, 20%);
+    font-weight: 700;
+}
+
+#error-msg {
+    display: none;
+    color: tomato;
+    font-weight: 700;
+}
+
+#input-email {
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    outline: none;
+    width: 100%;
+    height: 54px;
+}
+
+.validate-div-active #error-msg {
+    display: block;
+}
+
+.input-div-active #input-email {
+    border: 2px solid lightcoral;
+    background: rgba(240, 128, 128, 0.4);
+}
+
+#btn-submit {
+    margin: 2rem 0;
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 54px;
+    color: white;
+    background-color: hsl(234, 29%, 20%);
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: hsl(234, 29%, 20%);
+    }
+
+    .container {
+        width: 900px;
+        padding: 25px;
+        border-radius: 35px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .img-div {
+        float: right;
+        width: 45%;
+        background-image: url(../images/illustration-sign-up-desktop.svg);
+        background-size: cover;
+        height: 500px;
+        border-radius: 20px;
+    }
+
+    .div-content {
+        float: left;
+        width: 50%;
+    }
+
+    #btn-submit {
+        cursor: pointer;
+    }
+
+    #btn-submit:hover {
+        background-image: linear-gradient(50deg, tomato, lightcoral);
+    }
+}

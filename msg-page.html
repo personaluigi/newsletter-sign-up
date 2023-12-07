@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/msg-page.css">
+    <title>Mensage Sucess</title>
+</head>
+
+<body>
+    <main class="container">
+        <img src="assets/images/icon-success.svg" alt="">
+        <h1>Thanks for subscribing!</h1>
+        <p id="text-msg"></p>
+        <button>Dismiss message</button>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const emailParam = new URLSearchParams(window.location.search).get('email')
+            const text = document.getElementById('text-msg')
+
+            if (emailParam) {
+                text.innerHTML = `A confirmation email has been sent to <strong>${decodeURIComponent(emailParam)}</strong>.
+                Please open it and click the button inside to confirm your subscription.`;
+            } else {
+                text.innerHTML = 'Invalid or missing email parameter.'
+            }
+        })
+    </script>
+</body>
+
+</html>
